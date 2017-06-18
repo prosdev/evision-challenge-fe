@@ -28,12 +28,16 @@ class LocationList extends Component {
         }
         if(locationData) {
             return (
-                <div>
-                    <h2>Location Information</h2>
-                    <h5>The city is: {locationData.cityName}</h5>
-                    <h5>The temperature is: {locationData.temperature}</h5>
-                    <h5>The timezone is: {locationData.timezoneInfo.timeZoneId} ({locationData.timezoneInfo.timeZoneId})</h5>
-                    <h5>The elevation is: {locationData.elevation.toFixed(2)} meters</h5>
+                <div className="card">
+                    <h4 className="card-header">{locationData.cityName}</h4>
+                    <img className="card-img-top" src="http://via.placeholder.com/350x150" alt={locationData.cityName}/>
+                    <div className="card-block">
+                        <p>At the location <span className="bold">{locationData.cityName}</span>,
+                            the temperature is {locationData.temperature} °F,
+                            the timezone is {locationData.timezoneInfo.timeZoneId},
+                            and the elevation is {locationData.elevation.toFixed(2)}.
+                        </p>
+                    </div>
                 </div>
             )
         }
