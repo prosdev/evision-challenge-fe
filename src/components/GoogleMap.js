@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-var GoogleMapsLoader = require('google-maps'); // only for common js environments
-import config from '../../config';
+import config from '../config/config';
+import GoogleMapsLoader from 'google-maps';
 
 class GoogleMap extends Component {
     /**
