@@ -23,3 +23,6 @@ yarn-error.log*
 #IDE
 .idea/
 src/config/*
+public/*
+package-lock.json
+yarn.lock
