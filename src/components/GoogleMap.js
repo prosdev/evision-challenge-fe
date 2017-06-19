@@ -20,9 +20,21 @@ class GoogleMap extends Component {
                 }
             })
         });
-        console.log('Loaded');
+
         GoogleMapsLoader.onLoad(function(google) {
             console.log('I just loaded google maps api');
+        });
+    }
+
+    componentWillReceiveProps(nextProps) {
+        GoogleMapsLoader.load((google) => {
+            new google.maps.Map(this.refs.map, {
+                zoom: 9,
+                center : {
+                    lat: nextProps.lat,
+                    lng: nextProps.lon
+                }
+            })
         });
     }
 

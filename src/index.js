@@ -5,10 +5,10 @@ import { ApolloProvider } from 'react-apollo'
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
-
+import config from '../src/config/config';
 
 const networkInterface = createNetworkInterface({
-    uri: 'http://localhost:4000/graphql'
+    uri: config.NETWORK_INTERFACE_URI
 });
 
 const Client = new ApolloClient({
