@@ -77,7 +77,7 @@ GoogleMap.propTypes = {
     lat: PropTypes.number.isRequired,
 
     /** The longitude of a location. Expecting a float */
-    lng: PropTypes.number.isRequired,
+    lon: PropTypes.number.isRequired,
 
     /** Will have to pass in a width and height to display map. Otherwise, overflow--> hidden */
     mapStyle: PropTypes.shape({

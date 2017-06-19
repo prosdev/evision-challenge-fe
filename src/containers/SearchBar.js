@@ -2,8 +2,17 @@ import React, { Component } from 'react';
 
 import Location from './Location';
 
+/**
+ * Search bar.
+ * Enter a valid US zip code to display location information such as weather, temperature, time zone and elevation.
+ *
+ */
 class SearchBar extends Component {
 
+    /**
+     * Constructor for SearchBar component
+     * @param props
+     */
     constructor(props) {
         super(props);
 
@@ -16,12 +25,20 @@ class SearchBar extends Component {
         this.onFormSubmit = this.onFormSubmit.bind(this);
     }
 
+    /**
+     * Keep track of input in SearchBar component
+     * @param event
+     */
     onInputChange(event) {
         this.setState({
             term: event.target.value
         })
     }
 
+    /**
+     * Handle input submission.
+     * @param event
+     */
     onFormSubmit(event) {
         event.preventDefault();
         if(this.state.term.length === 5) {
@@ -36,6 +53,11 @@ class SearchBar extends Component {
         }
     }
 
+    /**
+     * Render SearchBar component along with the location component.
+     *
+     * @returns {HMTL}
+     */
     render() {
         return (
             <div className="col-md-6 offset-md-3">
