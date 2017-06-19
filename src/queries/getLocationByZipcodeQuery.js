@@ -1,15 +1,19 @@
 import gql from 'graphql-tag'
 
 export default gql`
-    query getLocationData ($zipcode: Int!) {
+    query getLocationData($zipcode: Int!) {
       getWeather(zipcode: $zipcode) {
         cityName
         temperature
-        timezoneInfo {
+        timeZoneInfo {
           timeZoneId
           timeZoneName
         }
         elevation
+        coord {
+          lon
+          lat
+        }
       }
     }
 `;

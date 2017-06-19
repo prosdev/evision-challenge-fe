@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "apollo-client": "^1.4.2",
+    "google-map-react": "^0.24.0",
+    "google-maps": "^3.2.1",
     "graphql-tag": "^2.4.0",
     "react": "^15.6.1",
     "react-apollo": "^1.4.2",

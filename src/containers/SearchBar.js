@@ -43,7 +43,7 @@ class SearchBar extends Component {
                     <input
                         type="text"
                         className="form-control"
-                        placeholder="Enter a zip code for weather and location info!"
+                        placeholder="Enter a valid US zip code..."
                         value={this.state.term}
                         onChange={this.onInputChange}
                     />
